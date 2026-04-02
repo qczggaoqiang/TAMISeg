@@ -1,0 +1,36 @@
+{
+  "exp_dir":  "saved_textdiff/KSeg",
+  "model_type": "condseg",
+  "category": "KSeg",
+  "number_class": 2,
+  "ignore_label": 255,
+
+  "training_path": "datasets/KSeg/train",
+  "validation_path": "datasets/KSeg/test",
+  "testing_path": "datasets/KSeg/test",
+  "model_path": "checkpoints/stage1_condseg_checkpoint.pth",
+
+  "use_alignment": true,
+  "lam": 0.5,
+  "vision_encoder_model": "dinov3_vitb16",
+  "dinov3_repo_dir": "/your/path/to/dinov3",
+  "dinov3_weights_path": "/your/path/to/dinov3_vitb16_pretrain_lvd1689m-73cec8be.pth",
+  "z_dim": 768,
+  "projector_dim": 2048,
+
+  "image_size": 256,
+  "dim": [512, 512, 256, 256],
+  "steps": [50, 150, 250],
+  "blocks": [6, 8, 12, 16],
+
+  "model_num": 1,
+  "batch_size": 4,
+  "max_training": 50,
+
+  "training_number": 50,
+  "testing_number": 20,
+
+  "upsample_mode":"bilinear",
+  "share_noise": true,
+  "input_activations": false
+ }
